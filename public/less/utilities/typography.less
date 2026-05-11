@@ -1,0 +1,138 @@
+@import "../variables";
+@import "../mixins";
+
+// .section-title - Main section heading
+.section-title {
+  .section-heading();
+}
+
+// .section-desc - Section description text
+.section-desc {
+  .section-sub();
+}
+
+// .accent-line - Decorative accent line
+.accent-line {
+  .divider-accent();
+}
+
+// .star-rating - Star rating display
+.star-rating {
+  color: @accent;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  span {
+    color: var(--text-muted);
+    font-family: @font-body;
+    font-size: 0.8rem;
+    margin-left: 6px;
+  }
+}
+
+// .price - Price display
+.price {
+  font-family: @font-heading;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: @primary;
+}
+
+// .price-old - Strikethrough old price
+.price-old {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+// Heading styles
+h1, h2, h3, h4, h5 {
+  font-family: @font-heading;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+// Paragraph and text utilities
+p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+// Text alignment utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Text color utilities
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-primary {
+  color: @primary;
+}
+
+.text-accent {
+  color: @accent;
+}
+
+.text-success {
+  color: @success;
+}
+
+.text-danger {
+  color: @danger;
+}
+
+// Text gradient
+.text-gradient {
+  .text-gradient();
+}

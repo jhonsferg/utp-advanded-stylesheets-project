@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sabor y Fuego - Pide tu comida favorita en minutos. Entrega rapida, calidad garantizada.">
+  <title>Sabor &amp; Fuego - Comida a tu puerta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <div class="header__logo-icon">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+        </div>
+        <div class="header__logo-text">
+          <strong>Sabor &amp; Fuego</strong>
+          <em>Comida que enamora</em>
+        </div>
+      </a>
+
+      <nav class="header__nav">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#menu">Menu</a>
+        <a href="#restaurantes">Restaurantes</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#" class="header__cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="header__cart-count">3</span>
+        </a>
+        <a href="#menu" class="header__cta">
+          <i class="fa-solid fa-bolt"></i>
+          Pedir Ahora
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="hero__bg"></div>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow">
+          <i class="fa-solid fa-location-dot"></i>
+          Entregamos en toda la ciudad
+        </span>
+        <h1 class="hero__title">
+          Sabores que<br>
+          <em>despiertan</em><br>
+          tu apetito
+        </h1>
+        <p class="hero__desc">
+          Descubre cientos de platillos de los mejores restaurantes de la ciudad. Pedido en segundos, entrega en minutos.
+        </p>
+        <div class="hero__cta">
+          <a href="#menu" class="btn-primary">
+            <i class="fa-solid fa-utensils"></i>
+            Explorar Menu
+          </a>
+          <a href="#como-funciona" class="btn-secondary">
+            <i class="fa-regular fa-circle-play"></i>
+            Como Funciona
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>+850</strong>
+            <span>Platillos</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <strong>+120</strong>
+            <span>Restaurantes</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <strong>4.9</strong>
+            <span>Valoracion</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <div class="hero__image-wrapper">
+          <img
+            class="hero__img-main"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=85&auto=format&fit=crop"
+            alt="Seleccion de platillos deliciosos"
+            loading="eager"
+          >
+          <div class="hero__card-floating hero__card-floating--time">
+            <div class="card-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="card-info">
+              <strong>25 min</strong>
+              <span>Entrega estimada</span>
+            </div>
+          </div>
+          <div class="hero__card-floating hero__card-floating--rating">
+            <strong>4.9</strong>
+            <span class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <span>12k+ Resenas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories" id="categorias">
+      <div class="container">
+        <div class="section__header">
+          <span class="section-tag">
+            <i class="fa-solid fa-grid-2"></i>
+            Categorias
+          </span>
+          <h2 class="section-title">Elige tu antojo</h2>
+          <div class="accent-line"></div>
+          <p class="section-desc">Desde hamburgesas jugosas hasta sushi fresco. Tenemos todo lo que tu paladar desea.</p>
+        </div>
+        <div class="categories__scroll">
+          <div class="categories__item active">
+            <div class="categories__icon">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+            <span class="categories__label">Destacados</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-burger"></i>
+            </div>
+            <span class="categories__label">Hamburguesas</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-pizza-slice"></i>
+            </div>
+            <span class="categories__label">Pizzas</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-fish"></i>
+            </div>
+            <span class="categories__label">Sushi</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-bowl-food"></i>
+            </div>
+            <span class="categories__label">Pastas</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <span class="categories__label">Ensaladas</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-drumstick-bite"></i>
+            </div>
+            <span class="categories__label">Pollos</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-pepper-hot"></i>
+            </div>
+            <span class="categories__label">Tacos</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-ice-cream"></i>
+            </div>
+            <span class="categories__label">Postres</span>
+          </div>
+          <div class="categories__item">
+            <div class="categories__icon">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <span class="categories__label">Bebidas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section__header section__header--left">
+          <span class="section-tag">
+            <i class="fa-solid fa-star"></i>
+            Los Mas Pedidos
+          </span>
+          <h2 class="section-title">Platillos Populares</h2>
+          <div class="accent-line"></div>
+          <p class="section-desc">Seleccionados por miles de clientes satisfechos. Calidad y sabor en cada bocado.</p>
+        </div>
+
+        <div class="menu-grid">
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80&auto=format&fit=crop"
+                alt="Hamburguesa Clasica"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--hot">
+                <i class="fa-solid fa-fire"></i> Popular
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">La Parrilla</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 20 min
+                </span>
+              </div>
+              <h3>Hamburguesa Clasica BBQ</h3>
+              <p>Carne angus 200g, queso cheddar doble, tocino ahumado, cebolla caramelizada y salsa BBQ artesanal.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(248)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 28.00</span>
+                  <span class="price-old">S/ 34.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop"
+                alt="Pizza Margarita"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--veg">
+                <i class="fa-solid fa-leaf"></i> Veggie
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">Forno Napoli</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 30 min
+                </span>
+              </div>
+              <h3>Pizza Margarita Napolitana</h3>
+              <p>Masa madre artesanal, salsa de tomate San Marzano, mozzarella fresca y albahaca de temporada.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(412)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 35.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600&q=80&auto=format&fit=crop"
+                alt="Sushi Roll"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--new">
+                <i class="fa-solid fa-sparkles"></i> Nuevo
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">Sakura Sushi</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 35 min
+                </span>
+              </div>
+              <h3>Dragon Roll Premium</h3>
+              <p>Roll de camaron tempura, aguacate, pepino y atun sellado al estilo nikkei con salsa ponzu.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>(189)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 42.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80&auto=format&fit=crop"
+                alt="Pasta Carbonara"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--hot">
+                <i class="fa-solid fa-fire"></i> Popular
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">Forno Napoli</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 25 min
+                </span>
+              </div>
+              <h3>Pasta Carbonara Romana</h3>
+              <p>Spaghetti al dente, guanciale ahumado, yema de huevo, pecorino romano y pimienta negra molida.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(305)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 30.00</span>
+                  <span class="price-old">S/ 38.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80&auto=format&fit=crop"
+                alt="Ensalada Mediterranea"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--veg">
+                <i class="fa-solid fa-leaf"></i> Veggie
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">Green Bowl</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 15 min
+                </span>
+              </div>
+              <h3>Ensalada Mediterranea</h3>
+              <p>Mix de hojas verdes, tomate cherry, aceitunas kalamata, queso feta, pepino y vinagreta de limon.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(156)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 22.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80&auto=format&fit=crop"
+                alt="Tacos al Pastor"
+                loading="lazy"
+              >
+              <span class="dish-badge dish-badge--hot">
+                <i class="fa-solid fa-fire"></i> Popular
+              </span>
+              <a href="#" class="dish-fav" aria-label="Agregar a favoritos">
+                <i class="fa-regular fa-heart"></i>
+              </a>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-meta">
+                <span class="restaurant-tag">El Taquero</span>
+                <span class="dish-time">
+                  <i class="fa-regular fa-clock"></i> 20 min
+                </span>
+              </div>
+              <h3>Tacos al Pastor (x3)</h3>
+              <p>Cerdo marinado en achiote con pina asada, cebolla, cilantro y salsa verde tatemada.</p>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(374)</span>
+              </div>
+              <div class="dish-footer">
+                <div class="dish-price">
+                  <span class="price">S/ 18.00</span>
+                  <span class="price-old">S/ 24.00</span>
+                </div>
+                <a href="#" class="dish-add" aria-label="Agregar al carrito">
+                  <i class="fa-solid fa-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top: 48px;">
+          <a href="#" class="btn-outline-primary">
+            <i class="fa-solid fa-grid-2"></i>
+            Ver todo el menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-it-works" id="como-funciona">
+      <div class="container">
+        <div class="section__header">
+          <span class="section-tag">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Proceso Simple
+          </span>
+          <h2 class="section-title">Pedir es muy facil</h2>
+          <div class="accent-line"></div>
+          <p class="section-desc">En tres pasos simples tu comida favorita estara en tu puerta.</p>
+        </div>
+
+        <div class="how-it-works__grid">
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Elige tu platillo</h3>
+            <p>Explora cientos de opciones de los mejores restaurantes de la ciudad. Filtra por categoria, precio o tiempo de entrega.</p>
+          </div>
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-icon">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <h3>Realiza tu pedido</h3>
+            <p>Agrega al carrito y paga de forma segura. Aceptamos tarjetas, transferencias y efectivo. Sin sorpresas en el cobro.</p>
+          </div>
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-icon">
+              <i class="fa-solid fa-motorcycle"></i>
+            </div>
+            <h3>Recibe en casa</h3>
+            <p>Nuestros repartidores llevan tu pedido caliente y a tiempo. Rastrea tu entrega en tiempo real hasta tu puerta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0; padding-bottom: clamp(60px, 8vw, 100px);">
+      <div class="promo-banner">
+        <div class="promo-banner__content">
+          <span class="promo-tag">
+            <i class="fa-solid fa-bolt"></i>
+            Oferta Limitada
+          </span>
+          <h2>30% de descuento<br>en tu primer pedido</h2>
+          <p>Registrate hoy y disfruta tu primera entrega con descuento exclusivo. Valido solo por tiempo limitado.</p>
+        </div>
+        <div class="promo-banner__action">
+          <div class="promo-code">
+            <span>Codigo de descuento</span>
+            <strong>FUEGO30</strong>
+          </div>
+          <a href="#" class="btn-white">
+            <i class="fa-solid fa-tag"></i>
+            Usar Codigo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section restaurants" id="restaurantes">
+      <div class="container">
+        <div class="section__header">
+          <span class="section-tag">
+            <i class="fa-solid fa-store"></i>
+            Aliados
+          </span>
+          <h2 class="section-title">Restaurantes Destacados</h2>
+          <div class="accent-line"></div>
+          <p class="section-desc">Los mejores establecimientos de la ciudad ahora disponibles en una sola plataforma.</p>
+        </div>
+
+        <div class="restaurants__grid">
+
+          <div class="restaurants__card">
+            <div class="restaurants__card-cover">
+              <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828329f?w=600&q=80&auto=format&fit=crop"
+                alt="La Parrilla"
+                loading="lazy"
+              >
+              <span class="rest-cuisine">Parrillas</span>
+              <span class="rest-promo">Envio gratis</span>
+            </div>
+            <div class="restaurants__card-body">
+              <div class="rest-header">
+                <h3>La Parrilla</h3>
+                <span class="rest-status open">
+                  <i class="fa-solid fa-circle" style="font-size:0.5rem"></i>
+                  Abierto
+                </span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>4.8 (520 resenas)</span>
+              </div>
+              <div class="rest-meta">
+                <div class="meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  25-35 min
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  S/ 3.00
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Min. S/ 15
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="restaurants__card">
+            <div class="restaurants__card-cover">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop"
+                alt="Forno Napoli"
+                loading="lazy"
+              >
+              <span class="rest-cuisine">Italiana</span>
+            </div>
+            <div class="restaurants__card-body">
+              <div class="rest-header">
+                <h3>Forno Napoli</h3>
+                <span class="rest-status open">
+                  <i class="fa-solid fa-circle" style="font-size:0.5rem"></i>
+                  Abierto
+                </span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.9 (841 resenas)</span>
+              </div>
+              <div class="rest-meta">
+                <div class="meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  30-40 min
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  S/ 5.00
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Min. S/ 20
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="restaurants__card">
+            <div class="restaurants__card-cover">
+              <img
+                src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=600&q=80&auto=format&fit=crop"
+                alt="Sakura Sushi"
+                loading="lazy"
+              >
+              <span class="rest-cuisine">Japonesa</span>
+              <span class="rest-promo">20% Off</span>
+            </div>
+            <div class="restaurants__card-body">
+              <div class="rest-header">
+                <h3>Sakura Sushi</h3>
+                <span class="rest-status busy">
+                  <i class="fa-solid fa-circle" style="font-size:0.5rem"></i>
+                  Muy pedido
+                </span>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>4.6 (310 resenas)</span>
+              </div>
+              <div class="rest-meta">
+                <div class="meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  35-50 min
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-motorcycle"></i>
+                  S/ 7.00
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Min. S/ 30
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top: 48px;">
+          <a href="#" class="btn-outline-primary">
+            <i class="fa-solid fa-store"></i>
+            Ver todos los restaurantes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section__header">
+          <span class="section-tag">
+            <i class="fa-solid fa-comments"></i>
+            Testimonios
+          </span>
+          <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+          <div class="accent-line"></div>
+          <p class="section-desc">Miles de personas ya confian en nosotros para sus pedidos diarios.</p>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <div class="testimonials__card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>La hamburguesa BBQ llego perfecta, caliente y en menos de 25 minutos. La aplicacion es super intuitiva y el repartidor muy amable. Definitivamente seguire pidiendo.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80&auto=format&fit=crop&face"
+                alt="Carlos M."
+                loading="lazy"
+              >
+              <div>
+                <strong>Carlos Mendoza</strong>
+                <span>Cliente desde 2022</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>Excelente variedad de restaurantes. El sushi de Sakura es increible, siempre fresco y bien presentado. El seguimiento en tiempo real me da mucha tranquilidad.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop&face"
+                alt="Laura P."
+                loading="lazy"
+              >
+              <div>
+                <strong>Laura Perez</strong>
+                <span>Cliente desde 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p>Pido todos los viernes para la familia. Los tacos al pastor son los mejores de la ciudad. El servicio al cliente es rapido y resuelven cualquier problema al instante.</p>
+            <div class="testimonial-author">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&face"
+                alt="Roberto G."
+                loading="lazy"
+              >
+              <div>
+                <strong>Roberto Gomez</strong>
+                <span>Cliente desde 2021</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section newsletter" id="contacto">
+      <div class="container">
+        <div class="newsletter__box">
+          <span class="section-tag" style="margin: 0 auto 14px;">
+            <i class="fa-solid fa-envelope"></i>
+            Newsletter
+          </span>
+          <h2 class="section-title">Recibe ofertas exclusivas</h2>
+          <div class="accent-line" style="margin: 16px auto 24px;"></div>
+          <p class="section-desc">Suscribete y se el primero en conocer nuestras promociones, nuevos restaurantes y descuentos de temporada.</p>
+          <div class="newsletter__form">
+            <input type="email" placeholder="tu@correo.com" name="email">
+            <button type="button">
+              <i class="fa-solid fa-paper-plane"></i>
+              Suscribirme
+            </button>
+          </div>
+          <p class="newsletter__note">
+            <i class="fa-solid fa-shield-halved"></i>
+            Tu informacion esta segura. Sin spam, solo lo bueno.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <!-- Quick Stats Section -->
+    <div class="footer__stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Restaurantes</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Usuarios activos</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-bicycle"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Entregas rápidas</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">4.8★</span>
+              <span class="stat-label">Calificación promedio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__main">
+
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <div class="footer__brand-icon">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <div class="footer__brand-text-wrapper">
+            <strong class="footer__brand-text">Sabor &amp; Fuego</strong>
+            <span class="footer__brand-tagline">Tu delivery de confianza</span>
+          </div>
+        </div>
+        <p class="footer__brand-desc">Tu plataforma de pedidos de comida favorita. Conectamos los mejores sabores de la ciudad con tu mesa. Desde el desayuno hasta la cena, siempre tenemos lo que buscas.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4><i class="fa-solid fa-map"></i> Navegación</h4>
+        <ul>
+          <li><a href="#inicio"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="#menu"><i class="fa-solid fa-chevron-right"></i> Menú</a></li>
+          <li><a href="#restaurantes"><i class="fa-solid fa-chevron-right"></i> Restaurantes</a></li>
+          <li><a href="#como-funciona"><i class="fa-solid fa-chevron-right"></i> Cómo funciona</a></li>
+          <li><a href="#contacto"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4><i class="fa-solid fa-building"></i> Empresa</h4>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Sobre Nosotros</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Oportunidades de Trabajo</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Sé Restaurante Aliado</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Únete como Repartidor</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Prensa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contact">
+        <h4><i class="fa-solid fa-headset"></i> Contacto &amp; Apps</h4>
+        
+        <div class="footer__contact-items">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="footer__contact-info">
+              <strong>Soporte al cliente</strong>
+              <span>+51 956 123 456</span>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer__contact-info">
+              <strong>Email</strong>
+              <span>hola@saborfuego.pe</span>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="footer__contact-info">
+              <strong>Horario</strong>
+              <span>Lun - Dom 10:00 - 23:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__app-badges">
+          <a href="#" class="app-badge">
+            <i class="fa-brands fa-apple"></i>
+            <div>
+              <span class="app-label">Descargar en</span>
+              <span class="app-name">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="app-badge">
+            <i class="fa-brands fa-google-play"></i>
+            <div>
+              <span class="app-label">Descargar en</span>
+              <span class="app-name">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2025 <a href="#">Sabor &amp; Fuego</a>. Todos los derechos reservados.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos de servicio</a>
+          <a href="#">Política de cookies</a>
+          <a href="#">Accesibilidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

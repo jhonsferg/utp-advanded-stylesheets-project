@@ -1,0 +1,112 @@
+@import "../variables";
+@import "../mixins";
+
+// .section - Base section component
+// Block: section
+// Elements: header, tag, title, desc, divider
+// Modifiers: --center, --left, --dark
+
+.section {
+  padding: clamp(60px, 8vw, 100px) 0;
+
+  // Section header wrapper
+  &__header {
+    text-align: center;
+    margin-bottom: clamp(40px, 6vw, 64px);
+
+    &--left {
+      text-align: left;
+
+      .accent-line {
+        margin-left: 0;
+      }
+
+      .section-desc {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// .categories - Horizontal scrollable categories
+// Block: categories
+// Elements: scroll, item, icon, label
+// Modifiers: --active
+
+.categories {
+  background: var(--bg-2);
+
+  // Scrollable container
+  &__scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 4px 16px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Individual category item
+  &__item {
+    .flex-col();
+    align-items: center;
+    gap: 12px;
+    min-width: 100px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform @transition-base;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      .categories__icon {
+        background: @primary;
+        color: #fff;
+        box-shadow: 0 8px 24px fade(@primary, 40%);
+      }
+
+      .categories__label {
+        color: @primary;
+      }
+    }
+
+    &.active {
+      .categories__icon {
+        background: @primary;
+        color: #fff;
+        box-shadow: 0 8px 24px fade(@primary, 40%);
+      }
+
+      .categories__label {
+        color: @primary;
+        font-weight: 800;
+      }
+    }
+  }
+
+  // Category icon box
+  &__icon {
+    width: 72px;
+    height: 72px;
+    border-radius: @radius-md;
+    background: var(--surface);
+    .flex-center();
+    font-size: 1.6rem;
+    color: var(--text-2);
+    transition: all @transition-base;
+    border: 1px solid transparent;
+  }
+
+  // Category label
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-2);
+    text-align: center;
+    transition: color @transition-base;
+    white-space: nowrap;
+  }
+}

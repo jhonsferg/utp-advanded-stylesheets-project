@@ -1,0 +1,416 @@
+@import "../variables";
+@import "../mixins";
+
+// .footer - Main footer section
+// Block: footer
+// Elements: stats, main, brand, col, contact, bottom, social
+// Modifiers: none yet
+
+.footer {
+  background: var(--bg-3);
+  border-top: 1px solid var(--border);
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--surface);
+  }
+
+  // Stats section at top
+  &__stats {
+    background: linear-gradient(135deg, @primary, @primary-dark);
+    padding: clamp(40px, 6vw, 64px) 0;
+    border-bottom: 1px solid fade(@primary, 30%);
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #fff;
+
+      .stat-icon {
+        width: 56px;
+        height: 56px;
+        background: rgba(255,255,255,0.15);
+        border-radius: @radius-md;
+        .flex-center();
+        font-size: 1.6rem;
+        flex-shrink: 0;
+        backdrop-filter: blur(8px);
+      }
+
+      .stat-content {
+        display: flex;
+        flex-direction: column;
+
+        .stat-number {
+          font-size: clamp(1.4rem, 3vw, 2rem);
+          font-weight: 800;
+          line-height: 1;
+        }
+
+        .stat-label {
+          font-size: 0.8rem;
+          opacity: 0.9;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  // Main footer content
+  &__main {
+    .container();
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    padding: clamp(48px, 7vw, 80px) 0;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 520px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  // Brand section (logo + description)
+  &__brand {
+    .flex-col();
+    gap: 18px;
+  }
+
+  // Brand logo container
+  &__brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  // Brand logo icon
+  &__brand-icon {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, @primary, @accent);
+    border-radius: @radius-md;
+    .flex-center();
+    color: #fff;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px fade(@primary, 35%);
+  }
+
+  // Brand text wrapper
+  &__brand-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  // Brand text
+  &__brand-text {
+    font-family: @font-heading;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text);
+  }
+
+  // Brand tagline
+  &__brand-tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: @primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  // Brand description
+  &__brand-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  // Social links container
+  &__social {
+    display: flex;
+    gap: 12px;
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: @radius-sm;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      .flex-center();
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: all @transition-fast;
+
+      &:hover {
+        background: @primary;
+        color: #fff;
+        border-color: @primary;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px fade(@primary, 40%);
+      }
+    }
+  }
+
+  // Footer column (links sections)
+  &__col {
+    h4 {
+      font-family: @font-heading;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        color: @primary;
+        font-size: 1.1rem;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: @primary;
+        border-radius: @radius-full;
+        margin-top: 4px;
+        margin-left: auto;
+      }
+    }
+
+    ul {
+      .flex-col();
+      gap: 10px;
+
+      li {
+        a {
+          font-size: 0.87rem;
+          color: var(--text-muted);
+          font-weight: 600;
+          transition: color @transition-fast, padding-left @transition-fast;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+
+          i {
+            font-size: 0.65rem;
+            opacity: 0.6;
+            transition: opacity @transition-fast;
+          }
+
+          &:hover {
+            color: @primary;
+            padding-left: 4px;
+
+            i {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Contact information section
+  &__contact {
+    h4 {
+      font-family: @font-heading;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        color: @primary;
+        font-size: 1.1rem;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: @primary;
+        border-radius: @radius-full;
+        margin-top: 4px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  // Contact items list
+  &__contact-items {
+    .flex-col();
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  // Individual contact item
+  &__contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  // Contact item icon
+  &__contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: @radius-xs;
+    background: fade(@primary, 12%);
+    .flex-center();
+    color: @primary;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  // Contact item info
+  &__contact-info {
+    strong {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    span {
+      font-size: 0.87rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+  }
+
+  // App download badges
+  &__app-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .app-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: @radius-sm;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text);
+      transition: all @transition-fast;
+
+      i {
+        font-size: 1.3rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .app-label {
+          opacity: 0.7;
+          font-size: 0.7rem;
+        }
+
+        .app-name {
+          font-size: 0.85rem;
+          font-weight: 800;
+        }
+      }
+
+      &:hover {
+        background: @primary;
+        color: #fff;
+        border-color: @primary;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px fade(@primary, 35%);
+      }
+    }
+  }
+
+  // Bottom footer bar
+  &__bottom {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+
+  // Bottom footer inner container
+  &__bottom-inner {
+    .container();
+    .flex-between();
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+  }
+
+  // Copyright text
+  &__copyright {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+
+    a {
+      color: @primary;
+      font-weight: 700;
+      transition: color @transition-fast;
+
+      &:hover {
+        color: @primary-dark;
+      }
+    }
+  }
+
+  // Bottom footer links
+  &__bottom-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      transition: color @transition-fast;
+
+      &:hover {
+        color: @primary;
+      }
+    }
+  }
+}
