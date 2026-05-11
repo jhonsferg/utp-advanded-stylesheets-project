@@ -1,0 +1,289 @@
+@import "variables";
+@import "mixins";
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  padding-top: var(--header-h);
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 50%, fade(@primary, 8%), transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 10% 80%, fade(@accent, 10%), transparent 60%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, fade(@primary, 12%), transparent 70%);
+      border-radius: 50%;
+
+      @media (prefers-color-scheme: dark) {
+        background: radial-gradient(circle, fade(@primary, 20%), transparent 70%);
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 80px @container-pad 80px;
+    padding-left: max(@container-pad, calc((100vw - @container-max) / 2 + @container-pad));
+
+    @media (max-width: 900px) {
+      padding: 60px @container-pad 40px;
+      text-align: center;
+    }
+
+    .hero__eyebrow {
+      .badge(fade(@primary, 15%), @primary);
+      margin-bottom: 20px;
+      animation: fadeInUp 0.6s ease both;
+
+      @media (prefers-color-scheme: dark) {
+        background: fade(@primary, 25%);
+      }
+    }
+
+    .hero__title {
+      font-family: @font-heading;
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 22px;
+      animation: fadeInUp 0.7s ease 0.1s both;
+
+      em {
+        font-style: normal;
+        .text-gradient();
+      }
+    }
+
+    .hero__desc {
+      .section-sub();
+      margin-bottom: 36px;
+      animation: fadeInUp 0.7s ease 0.2s both;
+    }
+
+    .hero__cta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+      animation: fadeInUp 0.7s ease 0.3s both;
+
+      @media (max-width: 900px) {
+        justify-content: center;
+      }
+    }
+
+    .hero__stats {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      animation: fadeInUp 0.7s ease 0.4s both;
+
+      @media (max-width: 900px) {
+        justify-content: center;
+      }
+
+      @media (max-width: 400px) {
+        gap: 20px;
+      }
+
+      .stat {
+        .flex-col();
+        gap: 2px;
+
+        strong {
+          font-family: @font-heading;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: @primary;
+          line-height: 1;
+        }
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: var(--text-muted);
+          text-transform: uppercase;
+          letter-spacing: 0.6px;
+        }
+      }
+
+      .stat-sep {
+        width: 1px;
+        height: 40px;
+        background: var(--border);
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 48px 80px 24px;
+    padding-right: max(48px, calc((100vw - @container-max) / 2 + @container-pad));
+
+    @media (max-width: 900px) {
+      min-height: 400px;
+      padding: 0 @container-pad 60px;
+    }
+
+    &-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+
+      .hero__img-main {
+        width: 100%;
+        aspect-ratio: 4 / 3.2;
+        border-radius: 32px 32px 80px 32px;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: var(--shadow-xl);
+        animation: scaleIn 0.8s ease 0.2s both;
+      }
+
+      .hero__card-floating {
+        position: absolute;
+        background: var(--surface);
+        border-radius: @radius-md;
+        padding: 14px 18px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border);
+        animation: floatCard 3s ease-in-out infinite;
+
+        &--time {
+          bottom: 24px;
+          left: -20px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          @media (max-width: 400px) {
+            left: 0;
+          }
+
+          .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: @radius-sm;
+            background: linear-gradient(135deg, @primary, @accent);
+            .flex-center();
+            color: #fff;
+            font-size: 1rem;
+            flex-shrink: 0;
+          }
+
+          .card-info {
+            strong {
+              display: block;
+              font-size: 0.95rem;
+              font-weight: 800;
+              color: var(--text);
+              font-family: @font-heading;
+            }
+
+            span {
+              font-size: 0.75rem;
+              color: var(--text-muted);
+              font-weight: 600;
+            }
+          }
+        }
+
+        &--rating {
+          top: 20px;
+          right: -16px;
+          text-align: center;
+          animation-delay: -1.5s;
+
+          @media (max-width: 400px) {
+            right: 0;
+          }
+
+          strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: @font-heading;
+            color: var(--text);
+            line-height: 1;
+          }
+
+          .stars {
+            color: @accent;
+            font-size: 0.75rem;
+            display: block;
+            margin: 4px 0;
+          }
+
+          span {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
