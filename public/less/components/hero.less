@@ -39,7 +39,7 @@
       background: radial-gradient(circle, fade(@primary, 12%), transparent 70%);
       border-radius: 50%;
 
-      @media (prefers-color-scheme: dark) {
+      html[color-scheme="dark"] {
         background: radial-gradient(circle, fade(@primary, 20%), transparent 70%);
       }
     }
@@ -61,7 +61,7 @@
       margin-bottom: 20px;
       animation: fadeInUp 0.6s ease both;
 
-      @media (prefers-color-scheme: dark) {
+      html[color-scheme="dark"] {
         background: fade(@primary, 25%);
       }
     }

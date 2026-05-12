@@ -37,11 +37,8 @@
   font-size: 0.8rem;
 }
 
-// Dark mode adjustments
-@media (prefers-color-scheme: dark) {
-  .btn-secondary {
-    background: var(--surface-2);
-    color: var(--text);
-    border-color: var(--border);
-  }
+html[color-scheme="dark"].btn-secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border);
 }

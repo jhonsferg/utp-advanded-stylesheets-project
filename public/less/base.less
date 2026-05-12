@@ -147,10 +147,8 @@ h1, h2, h3, h4, h5 {
   margin-left: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .btn-secondary {
-    background: var(--surface-2);
-    color: var(--text);
-    border-color: var(--border);
-  }
+html[color-scheme="dark"] .btn-secondary {
+  background: var(--surface-2);
+  color: var(--text);
+  border-color: var(--border);
 }
