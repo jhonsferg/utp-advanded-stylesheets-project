@@ -1,12 +1,10 @@
 @import "../variables";
 @import "../mixins";
 
-// .btn-primary - Primary call-to-action button
 .btn-primary {
   .btn-color(@primary, #fff, @primary-dark, @primary);
 }
 
-// .btn-secondary - Secondary button with surface background
 .btn-secondary {
   .btn(@primary, #fff, @primary-dark);
   background: var(--surface);
@@ -20,17 +18,14 @@
   }
 }
 
-// .btn-accent - Accent color button
 .btn-accent {
   .btn-color(@accent, #1A0A00, @accent-dark, @accent);
 }
 
-// .btn-outline-primary - Outline primary button
 .btn-outline-primary {
   .btn-outline(@primary, @primary);
 }
 
-// Add button (small variant)
 .btn-add {
   .btn(@primary, #fff, @primary-dark);
   padding: 8px 16px;

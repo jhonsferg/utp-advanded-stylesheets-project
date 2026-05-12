@@ -1,38 +1,31 @@
 @import "../variables";
 @import "../mixins";
 
-// .section-tag - Badge for section labels
 .section-tag {
   .badge(@primary, #fff);
   margin-bottom: 14px;
 }
 
-// .badge-hot - Red badge for popular items
 .badge-hot {
   .badge(#E53E3E, #fff);
 }
 
-// .badge-new - Accent badge for new items
 .badge-new {
   .badge(@accent, #1A0A00);
 }
 
-// .badge-veg - Green badge for vegetarian items
 .badge-veg {
   .badge(#38A169, #fff);
 }
 
-// .badge-success - Success/positive badge
 .badge-success {
   .badge(@success, #fff);
 }
 
-// .badge-danger - Danger/negative badge
 .badge-danger {
   .badge(@danger, #fff);
 }
 
-// .badge-neutral - Neutral badge
 .badge-neutral {
   .badge(var(--bg-3), var(--text));
 }

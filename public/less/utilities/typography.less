@@ -1,22 +1,18 @@
 @import "../variables";
 @import "../mixins";
 
-// .section-title - Main section heading
 .section-title {
   .section-heading();
 }
 
-// .section-desc - Section description text
 .section-desc {
   .section-sub();
 }
 
-// .accent-line - Decorative accent line
 .accent-line {
   .divider-accent();
 }
 
-// .star-rating - Star rating display
 .star-rating {
   color: @accent;
   font-size: 0.85rem;
@@ -32,7 +28,6 @@
   }
 }
 
-// .price - Price display
 .price {
   font-family: @font-heading;
   font-size: 1.4rem;
@@ -40,7 +35,6 @@
   color: @primary;
 }
 
-// .price-old - Strikethrough old price
 .price-old {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -48,7 +42,6 @@
   margin-left: 8px;
 }
 
-// Heading styles
 h1, h2, h3, h4, h5 {
   font-family: @font-heading;
   line-height: 1.2;
@@ -80,7 +73,6 @@ h5 {
   font-weight: 700;
 }
 
-// Paragraph and text utilities
 p {
   color: var(--text);
   line-height: 1.6;
@@ -98,7 +90,6 @@ small {
   font-size: 0.875rem;
 }
 
-// Text alignment utilities
 .text-center {
   text-align: center;
 }
@@ -111,7 +102,6 @@ small {
   text-align: right;
 }
 
-// Text color utilities
 .text-muted {
   color: var(--text-muted);
 }
@@ -132,7 +122,6 @@ small {
   color: @danger;
 }
 
-// Text gradient
 .text-gradient {
   .text-gradient();
 }

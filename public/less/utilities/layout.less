@@ -1,7 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-// Flexbox utilities
 .flex-center {
   .flex-center();
 }
@@ -14,7 +13,6 @@
   .flex-col();
 }
 
-// Display utilities
 .flex {
   display: flex;
 }
@@ -35,17 +33,14 @@
   gap: 24px;
 }
 
-// Grid utilities
 .grid {
   display: grid;
 }
 
-// Container
 .container {
   .container();
 }
 
-// Spacing utilities
 .mt-sm { margin-top: 8px; }
 .mt-md { margin-top: 16px; }
 .mt-lg { margin-top: 24px; }
@@ -61,7 +56,6 @@
 .p-lg { padding: 24px; }
 .p-xl { padding: 32px; }
 
-// Visibility utilities
 .sr-only {
   position: absolute;
   width: 1px;
@@ -78,7 +72,6 @@
   display: none !important;
 }
 
-// Overflow utilities
 .overflow-hidden {
   overflow: hidden;
 }
@@ -91,7 +84,6 @@
   overflow-x: auto;
 }
 
-// Transition utilities
 .transition-fast {
   transition: all @transition-fast;
 }
@@ -104,7 +96,6 @@
   transition: all @transition-slow;
 }
 
-// Shadow utilities
 .shadow-sm {
   box-shadow: var(--shadow-sm);
 }
@@ -121,7 +112,6 @@
   box-shadow: var(--shadow-xl);
 }
 
-// Cursor utilities
 .cursor-pointer {
   cursor: pointer;
 }
@@ -130,7 +120,6 @@
   cursor: default;
 }
 
-// Border radius utilities
 .rounded-xs {
   border-radius: @radius-xs;
 }
@@ -155,7 +144,6 @@
   border-radius: @radius-full;
 }
 
-// Opacity utilities
 .opacity-50 {
   opacity: 0.5;
 }

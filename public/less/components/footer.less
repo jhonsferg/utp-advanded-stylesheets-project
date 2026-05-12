@@ -1,11 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-// .footer - Main footer section
-// Block: footer
-// Elements: stats, main, brand, col, contact, bottom, social
-// Modifiers: none yet
-
 .footer {
   background: var(--bg-3);
   border-top: 1px solid var(--border);
@@ -14,7 +9,6 @@
     background: var(--surface);
   }
 
-  // Stats section at top
   &__stats {
     background: linear-gradient(135deg, @primary, @primary-dark);
     padding: clamp(40px, 6vw, 64px) 0;
@@ -67,7 +61,6 @@
     }
   }
 
-  // Main footer content
   &__main {
     .container();
     display: grid;
@@ -86,20 +79,17 @@
     }
   }
 
-  // Brand section (logo + description)
   &__brand {
     .flex-col();
     gap: 18px;
   }
 
-  // Brand logo container
   &__brand-logo {
     display: flex;
     align-items: center;
     gap: 14px;
   }
 
-  // Brand logo icon
   &__brand-icon {
     width: 52px;
     height: 52px;
@@ -112,14 +102,12 @@
     box-shadow: 0 8px 20px fade(@primary, 35%);
   }
 
-  // Brand text wrapper
   &__brand-text-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
 
-  // Brand text
   &__brand-text {
     font-family: @font-heading;
     font-size: 1.35rem;
@@ -127,7 +115,6 @@
     color: var(--text);
   }
 
-  // Brand tagline
   &__brand-tagline {
     font-size: 0.75rem;
     font-weight: 700;
@@ -136,7 +123,6 @@
     letter-spacing: 0.5px;
   }
 
-  // Brand description
   &__brand-desc {
     font-size: 0.88rem;
     color: var(--text-muted);
@@ -144,7 +130,6 @@
     max-width: 280px;
   }
 
-  // Social links container
   &__social {
     display: flex;
     gap: 12px;
@@ -170,7 +155,6 @@
     }
   }
 
-  // Footer column (links sections)
   &__col {
     h4 {
       font-family: @font-heading;
@@ -233,7 +217,6 @@
     }
   }
 
-  // Contact information section
   &__contact {
     h4 {
       font-family: @font-heading;
@@ -263,22 +246,18 @@
       }
     }
   }
-
-  // Contact items list
   &__contact-items {
     .flex-col();
     gap: 14px;
     margin-bottom: 24px;
   }
 
-  // Individual contact item
   &__contact-item {
     display: flex;
     gap: 12px;
     align-items: flex-start;
   }
 
-  // Contact item icon
   &__contact-icon {
     width: 36px;
     height: 36px;
@@ -291,7 +270,6 @@
     margin-top: 1px;
   }
 
-  // Contact item info
   &__contact-info {
     strong {
       display: block;
@@ -310,7 +288,6 @@
     }
   }
 
-  // App download badges
   &__app-badges {
     display: flex;
     flex-direction: column;
@@ -359,13 +336,11 @@
     }
   }
 
-  // Bottom footer bar
   &__bottom {
     border-top: 1px solid var(--border);
     padding: 24px 0;
   }
 
-  // Bottom footer inner container
   &__bottom-inner {
     .container();
     .flex-between();
@@ -380,7 +355,6 @@
     }
   }
 
-  // Copyright text
   &__copyright {
     font-size: 0.82rem;
     color: var(--text-muted);
@@ -396,7 +370,6 @@
     }
   }
 
-  // Bottom footer links
   &__bottom-links {
     display: flex;
     gap: 24px;

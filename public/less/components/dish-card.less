@@ -1,10 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-// .menu-grid - Container for dish cards
-// Block: menu-grid
-// Simple grid layout for responsive cards
-
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -17,11 +13,6 @@
   }
 }
 
-// .dish-card - Individual dish/food card
-// Block: dish-card
-// Elements: image, body, footer, badge, fav, meta
-// Modifiers: --featured, --popular
-
 .dish-card {
   background: var(--surface);
   border-radius: @radius-md;
@@ -30,7 +21,6 @@
   .card-hover();
   box-shadow: var(--shadow-sm);
 
-  // Image section
   &__image {
     position: relative;
     height: 210px;
@@ -46,7 +36,6 @@
     }
   }
 
-  // Badge on image (hot, new, vegetarian)
   &__badge {
     position: absolute;
     top: 14px;
@@ -65,7 +54,6 @@
     }
   }
 
-  // Favorite heart button
   &__fav {
     position: absolute;
     top: 14px;
@@ -88,12 +76,10 @@
     }
   }
 
-  // Card body content
   &__body {
     padding: 18px 20px 20px;
   }
 
-  // Metadata (restaurant, time)
   &__meta {
     display: flex;
     align-items: center;
@@ -101,7 +87,6 @@
     margin-bottom: 8px;
   }
 
-  // Restaurant name tag
   &__restaurant {
     font-size: 0.72rem;
     font-weight: 800;
@@ -110,7 +95,6 @@
     letter-spacing: 0.6px;
   }
 
-  // Delivery time display
   &__time {
     display: flex;
     align-items: center;
@@ -120,7 +104,6 @@
     font-weight: 600;
   }
 
-  // Dish title
   &__title {
     font-family: @font-heading;
     font-size: 1.15rem;
@@ -130,7 +113,6 @@
     line-height: 1.3;
   }
 
-  // Dish description
   &__desc {
     font-size: 0.83rem;
     color: var(--text-muted);
@@ -142,7 +124,6 @@
     overflow: hidden;
   }
 
-  // Footer with price and add button
   &__footer {
     .flex-between();
     align-items: center;
@@ -151,14 +132,12 @@
     border-top: 1px solid var(--border-2);
   }
 
-  // Price section
   &__price {
     display: flex;
     align-items: baseline;
     gap: 6px;
   }
 
-  // Add to cart button
   &__add {
     .btn(@primary, #fff, @primary-dark);
     padding: 8px 16px;
@@ -166,31 +145,23 @@
   }
 }
 
-// Utility classes for card variants (override if needed)
 .dish-badge {
-  // Class for backward compatibility
 }
 
 .dish-fav {
-  // Class for backward compatibility
 }
 
 .restaurant-tag {
-  // Class for backward compatibility
 }
 
 .dish-time {
-  // Class for backward compatibility
 }
 
 .dish-meta {
-  // Class for backward compatibility
 }
 
 .dish-footer {
-  // Class for backward compatibility
 }
 
 .dish-price {
-  // Class for backward compatibility
 }

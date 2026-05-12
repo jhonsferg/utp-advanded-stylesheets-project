@@ -10,12 +10,10 @@ function updateThemeButton(theme) {
 }
 
 function handleThemeButton(e) {
-  // Change document color-scheme
   let html = document.querySelector('html');
   let scheme = html.getAttribute('color-scheme') === 'dark' ? 'light' : 'dark';
   html.setAttribute('color-scheme', scheme);
   localStorage.setItem('color-scheme', scheme);
-  // Change toggle button icon
   updateThemeButton(scheme);
 }
 

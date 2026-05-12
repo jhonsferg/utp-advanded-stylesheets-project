@@ -1,11 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-// .header - Fixed navigation header
-// Block: header
-// Elements: inner, logo, nav, actions, cart, cta
-// Modifiers: --scrolled, --mobile
-
 .header {
   position: fixed;
   top: 0;
@@ -20,7 +15,6 @@
   -webkit-backdrop-filter: blur(12px);
   transition: background @transition-base, box-shadow @transition-base;
 
-  // Main container
   &__inner {
     .container();
     .flex-between();
@@ -28,7 +22,6 @@
     gap: 24px;
   }
 
-  // Logo section
   &__logo {
     display: flex;
     align-items: center;
@@ -37,7 +30,6 @@
     flex-shrink: 0;
   }
 
-  // Logo icon badge
   &__logo-icon {
     width: 42px;
     height: 42px;
@@ -50,7 +42,6 @@
     box-shadow: 0 4px 12px fade(@primary, 40%);
   }
 
-  // Logo text group
   &__logo-text {
     .flex-col();
     gap: 0;
@@ -72,7 +63,6 @@
     }
   }
 
-  // Navigation menu
   &__nav {
     display: flex;
     align-items: center;
@@ -102,7 +92,6 @@
     }
   }
 
-  // Actions container
   &__actions {
     display: flex;
     align-items: center;
@@ -118,7 +107,6 @@
     height: 44px;
   }
 
-  // Cart button
   &__cart {
     position: relative;
     .flex-center();
@@ -138,7 +126,6 @@
     }
   }
 
-  // Cart count badge
   &__cart-count {
     position: absolute;
     top: -4px;
@@ -153,7 +140,6 @@
     .flex-center();
   }
 
-  // CTA button
   &__cta {
     .btn(@primary, #fff, @primary-dark);
     padding: 10px 22px;
